@@ -93,7 +93,7 @@ CREATE TABLE `bsg_people` (
 
 LOCK TABLES `bsg_people` WRITE;
 /*!40000 ALTER TABLE `bsg_people` DISABLE KEYS */;
-INSERT INTO `bsg_people` VALUES (1,'Will','Adama',20,634,'Human'),(2,'Lee','Adama',3,100,'Human'),(3,'Laura','Roslin',22,100,'Human'),(6,'Saul','Tigh',NULL,71,'Human'),(9,'Callandra','Henderson',NULL,NULL,'Human'),(17,'Trey','Hoover',16,23,'Human'),(18,'Luke','Bob',16,24,'Human'),(20,'Bob','Jones',2,27,'Human');
+INSERT INTO `bsg_people` VALUES (1,'Will','Adama',20,634,'Human'),(2,'Lee','Adama',3,100,'Human'),(3,'Laura','Roslin',22,100,'Human'),(6,'Saul','Tigh',NULL,71,'Human'),(9,'Callandra','Henderson',NULL,NULL,'Human'),(17,'Trey','Hoover',16,23,'Human'),(18,'Luke','Bob',16,24,'Human'),(20,'Hermione','Grainger',2,27,'Human');
 /*!40000 ALTER TABLE `bsg_people` ENABLE KEYS */;
 UNLOCK TABLES;
 
