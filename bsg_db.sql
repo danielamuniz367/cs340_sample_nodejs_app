@@ -71,21 +71,21 @@ UNLOCK TABLES;
 -- Table structure for table `bsg_people`
 --
 
-DROP TABLE IF EXISTS `bsg_people`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `bsg_people` (
-  `character_id` int(11) NOT NULL AUTO_INCREMENT,
-  `fname` varchar(255) NOT NULL,
-  `lname` varchar(255) DEFAULT NULL,
-  `homeworld` int(11) DEFAULT NULL,
-  `age` int(11) DEFAULT NULL,
-  `race` varchar(5) NOT NULL DEFAULT 'Human',
-  PRIMARY KEY (`character_id`),
-  KEY `homeworld` (`homeworld`),
-  CONSTRAINT `bsg_people_ibfk_1` FOREIGN KEY (`homeworld`) REFERENCES `bsg_planets` (`planet_id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+-- DROP TABLE IF EXISTS `bsg_people`;
+-- /*!40101 SET @saved_cs_client     = @@character_set_client */;
+-- /*!40101 SET character_set_client = utf8 */;
+-- CREATE TABLE `bsg_people` (
+--   `character_id` int(11) NOT NULL AUTO_INCREMENT,
+--   `fname` varchar(255) NOT NULL,
+--   `lname` varchar(255) DEFAULT NULL,
+--   `homeworld` int(11) DEFAULT NULL,
+--   `age` int(11) DEFAULT NULL,
+--   `race` varchar(5) NOT NULL DEFAULT 'Human',
+--   PRIMARY KEY (`character_id`),
+--   KEY `homeworld` (`homeworld`),
+--   CONSTRAINT `bsg_people_ibfk_1` FOREIGN KEY (`homeworld`) REFERENCES `bsg_planets` (`planet_id`) ON DELETE SET NULL ON UPDATE CASCADE
+-- ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+-- /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `bsg_people`
