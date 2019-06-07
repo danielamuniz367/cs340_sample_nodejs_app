@@ -91,10 +91,35 @@ UNLOCK TABLES;
 -- Dumping data for table `bsg_people`
 --
 
-LOCK TABLES `bsg_people` WRITE;
-/*!40000 ALTER TABLE `bsg_people` DISABLE KEYS */;
-INSERT INTO `bsg_people` VALUES (1,'Will','Adama',20,634,'Human'),(2,'Lee','Adama',3,100,'Human'),(3,'Laura','Roslin',22,100,'Human'),(6,'Saul','Tigh',NULL,71,'Human'),(9,'Callandra','Henderson',NULL,NULL,'Human'),(17,'Trey','Hoover',16,23,'Human'),(18,'Luke','Bob',16,24,'Human'),(20,'Hermione','Grainger',2,27,'Human');
-/*!40000 ALTER TABLE `bsg_people` ENABLE KEYS */;
+-- LOCK TABLES `bsg_people` WRITE;
+-- /*!40000 ALTER TABLE `bsg_people` DISABLE KEYS */;
+-- INSERT INTO `bsg_people` VALUES (1,'Will','Adama',20,634,'Human'),(2,'Lee','Adama',3,100,'Human'),(3,'Laura','Roslin',22,100,'Human'),(6,'Saul','Tigh',NULL,71,'Human'),(9,'Callandra','Henderson',NULL,NULL,'Human'),(17,'Trey','Hoover',16,23,'Human'),(18,'Luke','Bob',16,24,'Human'),(20,'Hermione','Grainger',2,27,'Human');
+-- /*!40000 ALTER TABLE `bsg_people` ENABLE KEYS */;
+-- UNLOCK TABLES;
+
+DROP TABLE IF EXISTS `students`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `students` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fname` varchar(255) NOT NULL,
+  `lname` varchar(255) DEFAULT NULL,
+  `type` varchar(6) NOT NULL,
+  `class_year` int(1) DEFAULT NULL,
+  `house_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `house_id` (`house_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `students`
+--
+
+LOCK TABLES `students` WRITE;
+/*!40000 ALTER TABLE `students` DISABLE KEYS */;
+INSERT INTO `students` VALUES (1,'Harry','Potterr','Wizard',6,1),(2,'Hermione','Granger','Witch',6,1),(3,'Ginevra','Weasley','Witch',5,1),(4,'Ronald','Weasley','Witch',5,1);
+/*!40000 ALTER TABLE `students` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
