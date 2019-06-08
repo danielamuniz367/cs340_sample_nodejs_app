@@ -6,13 +6,17 @@
 <form id="addperson" action="/people" method="post">
     First name: <input type="text" name="fname"><br>
     Last name: <input type="text" name="lname"><br>
+    Type: <select name="type"> 
+        {{#each type}}
+        <option value="{{id}}">{{name}}</option>
+        {{/each}}
+    </select><br>
     Class year: <input type="text" name="lname"><br>
     House: <select name="house"> 
         {{#each houses}}
         <option value="{{id}}">{{name}}</option>
         {{/each}}
     </select><br>
-    Age: <input type="number" name="age"><br>
     <input type="submit" value="Submit">
  </form>
 <br/>
