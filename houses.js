@@ -64,7 +64,23 @@ module.exports = function () {
     //steak.send("Here's a good tasty well done steak");
   }
 
-  router.get('/', getHouses);
+  router.get('/:id', function (req, res) {
+    callbackCount = 0;
+    var context = {};
+    context.jsscripts = ["selectedplanet.js", "updateperson.js"];
+    var mysql = req.app.get('mysql');
+    getPerson(res, mysql, context, req.params.id, complete);
+    getHouses(res, mysql, context, complete);
+
+    function complete() {
+      callbackCount++;
+      if (callbackCount >= 2) {
+        res.render('update-person', context);
+      }
+
+    }
+  });
+
   // router.get('/', serveHouses);
   router.get('/:fancyId', serveOneHouse);
   return router;
