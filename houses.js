@@ -64,18 +64,18 @@ module.exports = function () {
     //steak.send("Here's a good tasty well done steak");
   }
 
-  router.get('/:id', function (req, res) {
-    callbackCount = 0;
+  router.get('/', function (req, res) {
+    var callbackCount = 0;
     var context = {};
-    context.jsscripts = ["selectedplanet.js", "updateperson.js"];
+    context.jsscripts = ["deleteperson.js", "filterpeople.js", "searchpeople.js"];
     var mysql = req.app.get('mysql');
-    getPerson(res, mysql, context, req.params.id, complete);
+    getPeople(res, mysql, context, complete);
     getHouses(res, mysql, context, complete);
 
     function complete() {
       callbackCount++;
       if (callbackCount >= 2) {
-        res.render('update-person', context);
+        res.render('people', context);
       }
 
     }
