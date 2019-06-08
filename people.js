@@ -16,7 +16,7 @@ module.exports = function(){
     function getPeople(res, mysql, context, complete){
         // mysql.pool.query("SELECT bsg_people.character_id as id, fname, lname, bsg_planets.name AS homeworld, age FROM bsg_people INNER JOIN bsg_planets ON homeworld = bsg_planets.planet_id", function(error, results, fields){
         // mysql.pool.query("SELECT students.id as id, fname, lname, type, class_year, house_id FROM students", function(error, results, fields){
-        mysql.pool.query("SELECT students.id as id, fname, lname, type, class_year, houses.name as house_id FROM students INNER JOIN houses on house_id = houses.id", function(error, results, fields){
+        mysql.pool.query("SELECT students.id as id, fname, lname, students.type as type, class_year, houses.name as house_id FROM students INNER JOIN houses on house_id = houses.id", function(error, results, fields){
 
             if(error){
                 res.write(JSON.stringify(error));
