@@ -2,7 +2,7 @@ module.exports = function(){
     var express = require('express');
     var router = express.Router();
 
-    function getPlanets(res, mysql, context, complete){
+    function getHouses(res, mysql, context, complete){
         mysql.pool.query("SELECT houses.id as id, name FROM houses", function(error, results, fields){
             if(error){
                 res.write(JSON.stringify(error));
@@ -78,7 +78,7 @@ module.exports = function(){
         context.jsscripts = ["deleteperson.js","filterpeople.js","searchpeople.js"];
         var mysql = req.app.get('mysql');
         getPeople(res, mysql, context, complete);
-        getPlanets(res, mysql, context, complete);
+        getHouses(res, mysql, context, complete);
         function complete(){
             callbackCount++;
             if(callbackCount >= 2){
@@ -95,7 +95,7 @@ module.exports = function(){
         context.jsscripts = ["deleteperson.js","filterpeople.js","searchpeople.js"];
         var mysql = req.app.get('mysql');
         getPeoplebyHomeworld(req,res, mysql, context, complete);
-        getPlanets(res, mysql, context, complete);
+        getHouses(res, mysql, context, complete);
         function complete(){
             callbackCount++;
             if(callbackCount >= 2){
@@ -112,7 +112,7 @@ module.exports = function(){
         context.jsscripts = ["deleteperson.js","filterpeople.js","searchpeople.js"];
         var mysql = req.app.get('mysql');
         getPeopleWithNameLike(req, res, mysql, context, complete);
-        getPlanets(res, mysql, context, complete);
+        getHouses(res, mysql, context, complete);
         function complete(){
             callbackCount++;
             if(callbackCount >= 2){
@@ -129,7 +129,7 @@ module.exports = function(){
         context.jsscripts = ["selectedplanet.js", "updateperson.js"];
         var mysql = req.app.get('mysql');
         getPerson(res, mysql, context, req.params.id, complete);
-        getPlanets(res, mysql, context, complete);
+        getHouses(res, mysql, context, complete);
         function complete(){
             callbackCount++;
             if(callbackCount >= 2){
