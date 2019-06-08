@@ -1,8 +1,17 @@
+<h3>Current staff:</h3>
+
 <table>
-{{#each houses}}
-  <tr>
-    <td>{{id}}</td>
-    <td>{{name}}</td>
-  </tr>
-{{/each}}
+  <thead>
+    <th>ID</th>
+    <th>Name</th>
+  </thead>
+  <tbody>
+    {{#each houses}}
+    <tr>
+      <td>{{id}}</td>
+      <td>{{name}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+
 </table>
