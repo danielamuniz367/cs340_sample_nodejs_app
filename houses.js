@@ -69,15 +69,12 @@ module.exports = function () {
     var context = {};
     context.jsscripts = ["deleteperson.js", "filterpeople.js", "searchpeople.js"];
     var mysql = req.app.get('mysql');
-    getPeople(res, mysql, context, complete);
     getHouses(res, mysql, context, complete);
-
     function complete() {
       callbackCount++;
       if (callbackCount >= 2) {
-        res.render('people', context);
+        res.render('houses', context);
       }
-
     }
   });
 
