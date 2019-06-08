@@ -44,7 +44,7 @@ module.exports = function(){
             steak.write(error)
             steak.end();
           }else{
-            steak.render('serverPlanet',context);
+            steak.render('serverHouse',context);
           }
       }
       //execute the query
