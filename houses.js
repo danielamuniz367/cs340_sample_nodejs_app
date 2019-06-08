@@ -4,7 +4,7 @@ module.exports = function(){
 
     function serveHouses(req, res){
         console.log("You asked me for some houses?")
-        var query = 'SELECT houses.id as id, name FROM houses'
+        var query = 'SELECT id, name FROM houses'
         var mysql = req.app.get('mysql');
         var context = {};
 
