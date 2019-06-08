@@ -64,7 +64,8 @@ module.exports = function () {
     //steak.send("Here's a good tasty well done steak");
   }
 
-  router.get('/', serveHouses);
+  router.get('/', getHouses);
+  // router.get('/', serveHouses);
   router.get('/:fancyId', serveOneHouse);
   return router;
 }();
