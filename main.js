@@ -16,7 +16,6 @@ app.use('/static', express.static('public'));
 app.set('view engine', 'handlebars');
 app.set('port', process.argv[2]);
 app.set('mysql', mysql);
-app.use('/people_certs', require('./people_certs.js'));
 app.use('/people', require('./people.js'));
 app.use('/staff', require('./staff.js'));
 app.use('/houses', require('./houses.js'));
