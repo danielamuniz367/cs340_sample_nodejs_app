@@ -14,9 +14,9 @@ module.exports = function(){
           console.log(results)
           console.log(fields)
           //take the results of that query and store ti inside context
-          context.planets = results;
+          context.houses = results;
           //pass it to handlebars to put inside a file
-          res.render('planets', context)
+          res.render('houses', context)
         }
         //execute the sql query
         mysql.pool.query(query, handleRenderingOfHouses)
