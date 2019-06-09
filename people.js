@@ -142,11 +142,11 @@ module.exports = function(){
     /* Adds a person, redirects to the people page after adding */
 
     router.post('/', function(req, res){
-        console.log(req.body.homeworld)
+        console.log(req.body.house)
         console.log(req.body)
         var mysql = req.app.get('mysql');
-        var sql = "INSERT INTO bsg_people (fname, lname, homeworld, age) VALUES (?,?,?,?)";
-        var inserts = [req.body.fname, req.body.lname, req.body.homeworld, req.body.age];
+        var sql = "INSERT INTO students (fname, lname, type, class_year, house) VALUES (?,?,?,?)";
+        var inserts = [req.body.fname, req.body.lname, req.body.type, req.body.class_year, req.body.class_year, req.body.house];
         sql = mysql.pool.query(sql,inserts,function(error, results, fields){
             if(error){
                 console.log(JSON.stringify(error))
