@@ -82,7 +82,7 @@ module.exports = function(){
         function complete(){
             callbackCount++;
             if(callbackCount >= 2){
-                res.render('staff', context);
+                res.render('people', context);
             }
 
         }
@@ -99,7 +99,7 @@ module.exports = function(){
         function complete(){
             callbackCount++;
             if(callbackCount >= 2){
-                res.render('staff', context);
+                res.render('people', context);
             }
 
         }
