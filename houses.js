@@ -5,7 +5,7 @@ module.exports = function () {
   function servePlanets(req, res) {
     alert('IS THIS WORKING?');  
     console.log("You asked me for some planets?")
-    var query = 'SELECT name FROM houses';
+    var query = 'SELECT id, name FROM houses';
     var mysql = req.app.get('mysql');
     var context = {};
 
