@@ -1,13 +1,67 @@
-<table>
-{{#each planets}}
-  <tr>
-    <td>{{planet_id}}</td>
-    <td>{{name}}</td>
-    <td>{{population}}</td>
-  </tr>
-{{/each}}
-</table>
-
 <html>
-  HELLO
+{{#each foo}}
+{{this}}
+{{/each}}
+<h3>Add new students:</h3>
+<form id="addperson" action="/people" method="post">
+    First name: <input type="text" name="fname"><br>
+    Last name: <input type="text" name="lname"><br>
+    Type: <select name="type"> 
+        {{#each type}}
+        <option value="{{id}}">{{name}}</option>
+        {{/each}}
+    </select><br>
+    Class year: <input type="text" name="lname"><br>
+    House: <select name="house"> 
+        {{#each houses}}
+        <option value="{{id}}">{{name}}</option>
+        {{/each}}
+    </select><br>
+    <input type="submit" value="Submit">
+ </form>
+<br/>
+
+<form id='filter_people' action='' method=''>
+<!--- this form does not submit directly, the button handles all the interaction with backend -->
+    <label> Filter by house </label>
+    <select id='homeworld_filter' name="homeworld"> 
+        {{#each houses}}
+        <option value="{{id}}">{{name}}</option>
+        {{/each}}
+    </select><br>
+    <input type="button" value="Filter" onclick="filterPeopleByHomeworld()">
+</form>
+
+<form id='search_people' action='' method=''>
+<!--- this form does not submit directly, the button handles all the interaction with backend -->
+    <label> Search people for first name starting with:</label>
+    <input id='first_name_search_string' type='text' name='first_name_search_string' value=''>
+    <input type="button" value="Search" onclick="searchPeopleByFirstName()">
+</form>
+
+<h3>Current students:</h3>
+<table>
+    <thead> 
+        <th>ID</th>
+        <th>First Name</th> 
+        <th>Last Name</th> 
+        <th>Type</th>
+        <th>Class Year</th>
+        <th>House</th>  
+    </thead> 
+    <tbody>
+        {{#each people}} 
+        <tr> 
+            <td>{{id}}</td>
+            <td>{{fname}}</td> 
+            <td>{{lname}}</td> 
+            <td>{{type}}</td>
+            <td>{{class_year}}</td> 
+            <td>{{house_id}}</td>
+            <td><button onclick="deletePerson({{id}})">Delete</button></td>
+            <td><a href="/people/{{id}}">Update</a></td>
+        </tr> 
+        {{/each}} 
+    </tbody> 
+</table> 
 </html>
