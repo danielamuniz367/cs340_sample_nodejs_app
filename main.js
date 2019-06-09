@@ -17,14 +17,6 @@ app.set('view engine', 'handlebars');
 app.set('port', process.argv[2]);
 app.set('mysql', mysql);
 app.use('/people', require('./people.js'));
-<<<<<<< HEAD
-=======
-app.use('/staff', require('./staff.js'));
-app.use('/houses'), require('./houses.js');
-<<<<<<< HEAD
->>>>>>> 46986a3cda7981b61d09305b067ed2eeb9f6ac46
-=======
->>>>>>> 46986a3cda7981b61d09305b067ed2eeb9f6ac46
 app.use('/', express.static('public'));
 
 app.use(function(req,res){
