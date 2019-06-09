@@ -1,16 +1,9 @@
-<h3>Houses</h3>
-
 <table>
-  <thead>
-    <th>ID</th>
-    <th>Name</th>
-  </thead>
-  <tbody>
-    {{#each houses}}
-    <tr>
-      <td>{{id}}</td>
-      <td>{{name}}</td>
-    </tr>
-    {{/each}}
-  </tbody>
+{{#each planets}}
+  <tr>
+    <td>{{planet_id}}</td>
+    <td>{{name}}</td>
+    <td>{{population}}</td>
+  </tr>
+{{/each}}
 </table>
