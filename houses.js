@@ -24,6 +24,6 @@ module.exports = function () {
     //res.send('Here you go!');
   }
 
-  router.get('/houses', servePlanets);
+  router.get('/', servePlanets);
   return router;
 }();
