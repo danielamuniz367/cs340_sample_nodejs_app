@@ -63,7 +63,7 @@ module.exports = function () {
     var context = {};
     context.jsscripts = ["deleteperson.js", "filterpeople.js", "searchpeople.js"];
     var mysql = req.app.get('mysql');
-    getStudents(res, mysql, context, complete);
+    getHouses(res, mysql, context, complete);
 
     function complete() {
       callbackCount++;
