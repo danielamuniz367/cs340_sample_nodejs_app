@@ -3,7 +3,7 @@ module.exports = function () {
   var router = express.Router();
 
   function getHouses(res, mysql, context, complete) {
-    mysql.pool.query("SELECT houses.id as id, name FROM houses", function (error, results, fields) {
+    mysql.pool.query("SELECT  id, name FROM houses", function (error, results, fields) {
       if (error) {
         res.write(JSON.stringify(error));
         res.end();
@@ -72,7 +72,7 @@ module.exports = function () {
       }
 
     }
-  });
+  })
 
   return router;
 }();
