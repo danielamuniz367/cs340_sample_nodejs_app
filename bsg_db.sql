@@ -67,36 +67,6 @@ INSERT INTO `bsg_cert_people` VALUES (1,1,'0000-00-00'),(1,2,'0000-00-00'),(2,1,
 /*!40000 ALTER TABLE `bsg_cert_people` ENABLE KEYS */;
 UNLOCK TABLES;
 
---
--- Table structure for table `bsg_people`
---
-
--- DROP TABLE IF EXISTS `bsg_people`;
--- /*!40101 SET @saved_cs_client     = @@character_set_client */;
--- /*!40101 SET character_set_client = utf8 */;
--- CREATE TABLE `bsg_people` (
---   `character_id` int(11) NOT NULL AUTO_INCREMENT,
---   `fname` varchar(255) NOT NULL,
---   `lname` varchar(255) DEFAULT NULL,
---   `homeworld` int(11) DEFAULT NULL,
---   `age` int(11) DEFAULT NULL,
---   `race` varchar(5) NOT NULL DEFAULT 'Human',
---   PRIMARY KEY (`character_id`),
---   KEY `homeworld` (`homeworld`),
---   CONSTRAINT `bsg_people_ibfk_1` FOREIGN KEY (`homeworld`) REFERENCES `bsg_planets` (`planet_id`) ON DELETE SET NULL ON UPDATE CASCADE
--- ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
--- /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `bsg_people`
---
-
--- LOCK TABLES `bsg_people` WRITE;
--- /*!40000 ALTER TABLE `bsg_people` DISABLE KEYS */;
--- INSERT INTO `bsg_people` VALUES (1,'Will','Adama',20,634,'Human'),(2,'Lee','Adama',3,100,'Human'),(3,'Laura','Roslin',22,100,'Human'),(6,'Saul','Tigh',NULL,71,'Human'),(9,'Callandra','Henderson',NULL,NULL,'Human'),(17,'Trey','Hoover',16,23,'Human'),(18,'Luke','Bob',16,24,'Human'),(20,'Hermione','Grainger',2,27,'Human');
--- /*!40000 ALTER TABLE `bsg_people` ENABLE KEYS */;
--- UNLOCK TABLES;
-
 DROP TABLE IF EXISTS `students`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
