@@ -43,21 +43,21 @@ UNLOCK TABLES;
 -- Table structure for table `bsg_cert_people`
 --
 
-DROP TABLE IF EXISTS `bsg_cert_people`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `bsg_cert_people` (
-  `cid` int(11) NOT NULL DEFAULT '0',
-  `pid` int(11) NOT NULL DEFAULT '0',
-  `certification_date` date NOT NULL,
-  PRIMARY KEY (`cid`,`pid`),
-  KEY `pid` (`pid`),
-  CONSTRAINT `bsg_cert_people_ibfk_1` FOREIGN KEY (`cid`) REFERENCES `bsg_cert` (`certification_id`),
-  CONSTRAINT `bsg_cert_people_ibfk_2` FOREIGN KEY (`pid`) REFERENCES `bsg_people` (`character_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+-- DROP TABLE IF EXISTS `bsg_cert_people`;
+-- /*!40101 SET @saved_cs_client     = @@character_set_client */;
+-- /*!40101 SET character_set_client = utf8 */;
+-- CREATE TABLE `bsg_cert_people` (
+--   `cid` int(11) NOT NULL DEFAULT '0',
+--   `pid` int(11) NOT NULL DEFAULT '0',
+--   `certification_date` date NOT NULL,
+--   PRIMARY KEY (`cid`,`pid`),
+--   KEY `pid` (`pid`),
+--   CONSTRAINT `bsg_cert_people_ibfk_1` FOREIGN KEY (`cid`) REFERENCES `bsg_cert` (`certification_id`),
+--   CONSTRAINT `bsg_cert_people_ibfk_2` FOREIGN KEY (`pid`) REFERENCES `bsg_people` (`character_id`)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-- /*!40101 SET character_set_client = @saved_cs_client */;
 
---
+-- --
 -- Dumping data for table `bsg_cert_people`
 --
 
